@@ -31,6 +31,7 @@
                         <a href="s3.html" class="nav-hover">GroundBreaker</a>
                     </li>
                 </ul>
+
             </div>
             <i class="fa fa-bars" onClick="showMenu()"></i>
         </nav>
@@ -44,48 +45,52 @@
     </section>
     <!-- s1 project-->
     <section class="s1-project">
-        <div class="s1-project-row">
-            <div class="s1-project-col">
-                <image src="images/productImg.png" class="s1-productImg">
-            </div>
-
-            <div class="s1-project-col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div style="display: flex;
+        justify-content: center; height:600px;">
+            <div class="s1-project-row">
+                <div class="s1-project-col">
+                    <image src="images/productImg.png" class="s1-productImg">
+                </div>
+                <div class="s1-project-col">
+                    <p>Animation<br> Water cycle, image pixel, if else, ratio.</p>
+                </div>
             </div>
         </div>
-        <div class="s1-project-row">
-            <div class="s1-project-col">
-                <image src="images/productImg.png" class="s1-productImg">
+        <div style="display: flex;
+        justify-content: center; height:600px;">
+            <div class="s1-project-row">
+                <div class="s1-project-col">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+                <div class="s1-project-col">
+                    <image src="images/productImg.png" class="s1-productImg">
 
+                </div>
             </div>
-            <div class="s1-project-col">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-            </div>
-
         </div>
     </section>
 
     <section class="s1-item">
         <div class="s1-item-row reveal fade-left">
             <div class="item-col">
-                <a href="weatherStation.html">
+                <a href="s1-project/WaterCycle.html">
                     <image src="images/productImg.png" class="s1-itemImg">
                 </a>
                 <!-- <h3>s1</h3>
                               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
             </div>
             <div class="item-col">
-                <a href="index.html">
+                <a href="s1-project/AnimalClassification.html">
                     <image src="images/productImg.png" class="s1-itemImg">
                 </a>
             </div>
             <div class="item-col">
-                <a href="index.html">
+                <a href="s1-project/PlantScience.html">
                     <image src="images/productImg.png" class="s1-itemImg">
                 </a>
             </div>
             <div class="item-col">
-                <a href="index.html">
+                <a href="s1-project/Water3States.html">
                     <image src="images/productImg.png" class="s1-itemImg">
                 </a>
             </div>
@@ -143,6 +148,26 @@
             function hideMenu() {
                 navLinks.style.right = "-200px";
             }
+        </script>
+
+        <script>
+            function reveal() {
+                var reveals = document.querySelectorAll(".reveal");
+
+                for (var i = 0; i < reveals.length; i++) {
+                    var windowHeight = window.innerHeight;
+                    var elementTop = reveals[i].getBoundingClientRect().top;
+                    var elementVisible = 150;
+
+                    if (elementTop < windowHeight - elementVisible) {
+                        reveals[i].classList.add("active");
+                    } else {
+                        reveals[i].classList.remove("active");
+                    }
+                }
+            }
+
+            window.addEventListener("scroll", reveal);
         </script>
 </body>
 
