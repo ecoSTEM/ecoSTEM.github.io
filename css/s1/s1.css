@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f8f8f8;
+}
+
+.s1 {
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.s1-title {
+  width: 90%;
+  background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(18, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #fff; */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.s1-title h1 {
+  color: black;
+  font-size: 50px;
+}
+
+.s1-project-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 96%;
+}
+
+.s1-project {
+  width: 100%;
+  max-height: fit-content;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  /* background-color: rgba(236, 233, 233, 0.834); */
+}
+
+.s1-productImg {
+  width: 50rem;
+}
+
+.s1-project-col {
+  display: flex;
+  align-items: center;
+  /* width: 50%; */
+}
+
+.s1-project-col p {
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.s1-item-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.item-col {
+  flex-basis: 25%;
+  /* background-image: url(/images/productImg.png); */
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.s1-itemImg {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .s1-productImg {
+    width: 60%;
+  }
+
+  .s1-title h1 {
+    color: black;
+    font-size: 35px;
+  }
+
+  .s1-itemImg {
+    width: 50%;
+  }
+
+  .s1-project-col {
+    align-items: center;
+    display: inline-block;
+  }
+
+  .s1-project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .s1-item-row {
+    flex-direction: column;
+  }
+}
