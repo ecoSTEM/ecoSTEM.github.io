@@ -89,6 +89,7 @@ nav img {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+  margin-bottom: 50px;
 }
 
 .text-box h1 {
@@ -138,7 +139,11 @@ nav .fa {
     margin-bottom: 20px;
   }
   .text-box h1 {
-    font-size: 20px;
+    font-size: 30px;
+  }
+
+  .hero-img {
+    margin-top: 80px;
   }
 
   .hero-btn {
