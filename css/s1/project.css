@@ -6,7 +6,7 @@
 .s1-project-row {
   margin-top: 5%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 .s1-project {
@@ -19,7 +19,7 @@
 }
 
 .productImage {
-  width: 30rem;
+  width: 20rem;
 }
 
 .s1-project-col {
