@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ECO STEM</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/s1/s1.css" />
+    <link rel="stylesheet" href="css/tools.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
 </head>
 
@@ -38,71 +38,66 @@
             </div>
             <i class="fa fa-bars" onClick="showMenu()"></i>
         </nav>
-
     </section>
 
-    <section class="s1">
-        <div class="s1-title">
+    <section class="title-section">
+        <div class="title-text">
             <h1>How to use youCodia</h1>
         </div>
     </section>
     <!-- s1 project-->
-    <section class="s1-project">
-        <div style="display: flex;
-        justify-content: center; height:600px;">
-            <div class="s1-project-row">
-                <div class="s1-project-col">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/zAlX1V3lK5s">
-                    </iframe>
+    <section class="video-section">
+        <div>
+            <!-- <div> -->
+            <div style="padding: 5%;
+                    margin: 10px;
+                    justify-content: center;
+                    background-color: #fff;
+                    width: 40%;">
+                <iframe src="https://www.youtube.com/embed/aodZtllkWCw"></iframe>
+                <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/aodZtllkWCw"> -->
+                </iframe>
+                <div>
+                    <p style="color: black;
+                            font-weight: 600;
+                            font-size: 16px;">Animation<br> Water cycle, image pixel, if else, ratio.</p>
                 </div>
-                <div class="s1-project-col">
-                    <div>
-                        <p>Animation<br> Water cycle, image pixel, if else, ratio.</p>
-                    </div>
+                <!-- </div> -->
+            </div>
+
+            <!-- <div> -->
+            <div style="padding: 5%;
+            margin: 10px;
+            justify-content: center;
+            background-color: #fff;
+            width: 40%;">
+                <iframe src="https://www.youtube.com/embed/aodZtllkWCw">
+                </iframe>
+                <div>
+                    <p style="color: black;
+                font-weight: 600;
+                font-size: 16px;">Animation<br> Water cycle, image pixel, if else, ratio.</p>
                 </div>
             </div>
+            <!-- </div> -->
         </div>
+        </div>
+
+
+
         <div style="display: flex;
         justify-content: center; height:600px;">
-            <div class="s1-project-row">
-                <div class="s1-project-col">
+            <div class="video-row">
+                <div class="video-col">
                     <div>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
-                <div class="s1-project-col">
+                <div class="video-col">
                     <image src="images/productImg.png" class="s1-productImg">
                 </div>
             </div>
         </div>
-    </section>
-
-    <section class="s1-item">
-        <div class="s1-item-row reveal fade-left">
-            <div class="item-col">
-                <a href="s1-project/WaterCycle.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-                <!-- <h3>s1</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-            </div>
-            <div class="item-col">
-                <a href="s1-project/AnimalClassification.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-            </div>
-            <div class="item-col">
-                <a href="s1-project/PlantScience.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-            </div>
-            <div class="item-col">
-                <a href="s1-project/Water3States.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-            </div>
-        </div>
-
     </section>
 
     <section class="footer">
@@ -144,7 +139,6 @@
         </div>
         </footer>
 
-
         <!-- TOGGLR MENU -->
         <script>
 
@@ -156,27 +150,6 @@
                 navLinks.style.right = "-200px";
             }
         </script>
-
-        <script>
-            function reveal() {
-                var reveals = document.querySelectorAll(".reveal");
-
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowHeight = window.innerHeight;
-                    var elementTop = reveals[i].getBoundingClientRect().top;
-                    var elementVisible = 150;
-
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveals[i].classList.add("active");
-                    } else {
-                        reveals[i].classList.remove("active");
-                    }
-                }
-            }
-            window.addEventListener("scroll", reveal);
-        </script>
-
-
 </body>
 
 </html>

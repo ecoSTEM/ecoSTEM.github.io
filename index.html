@@ -1,145 +1,107 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ECO STEM</title>
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
+    <title>Authentication</title>
+    <link rel="stylesheet" href="cssFile.css">
 </head>
 
 <body>
-  <section class="header">
-    <nav>
-      <a href="index.html">
-        <image src="images/icon.png" class="logo">
-      </a>
-      <div class="nav-links" id="navLinks">
-        <i class="fa fa-times" onClick="hideMenu()"></i>
-        <ul>
-          <li>
-            <a href="about.html" class="nav-hover">About</a>
-          </li>
-          <li>
-            <a href="s1.html" class="nav-hover">Pioneer</a>
-          </li>
-          <li>
-            <a href="s2.html" class="nav-hover">Innovator</a>
-          </li>
-          <li>
-            <a href="s3.html" class="nav-hover">GroundBreaker</a>
-          </li>
-          <li>
-            <a href="learningTools.html" class="nav-hover">Learning Tools</a>
-          </li>
-        </ul>
-      </div>
-      <i class="fa fa-bars" onClick="showMenu()"></i>
-    </nav>
-    <div class="text-box">
-      <h1>ECO STEM</h1>
-      <a href="" class="hero-btn">Learn more &#62;</a>
-      <a href="" class="hero-btn">Sign Up &#62;</a>
-      <!-- <img class="hero-product-img" src="images/productImg.png" alt="product" /> -->
+    <!-- <image src="images/loginimg.svg" style="width:100%;height:100%;position: absolute;"> -->
+    <div id="login-box">
+        <div class="left">
+            <image src="images/icon.png" style="width:100px;padding:5px;">
+                <h1 id='status'>login</h1>
+                <input type="text" id="email" name="email" placeholder="E-mail" />
+                <input type="password" id="password" name="password" placeholder="Password" />
+                <input type="submit" id='login' name="login" value="Login" />
+        </div>
     </div>
-  </section>
-  <!-- <section> -->
-  <div class="hero-img"> <img class="hero-product-img" src="images/productImg.png" alt="product" /> </div>
-  <!-- </section> -->
-  <!-- course-->
-  <section class="course">
-    <div class="row eveal fade-bottom">
-      <div class="course-col">
-        <a href="s1.html" role="button">
-          <image src="images/1.svg" class="productImg">
-        </a>
-
-      </div>
-      <div class="course-col">
-        <a href="s2.html" role="button">
-          <image src="images/2.svg" class="productImg">
-        </a>
-      </div>
-      <div class="course-col">
-        <a href="s3.html" role="button">
-          <image src="images/3.svg" class="productImg">
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <section class="footer">
-    <div class="container">
-      <div class="footer-nav">
-        <div class="col-2">
-          <ul>
-            <li>YGN</li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Education</a></li>
-          </ul>
-        </div>
-        <div class="col-2">
-          <ul>
-            <li>YGN</li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Education</a></li>
-          </ul>
-        </div>
-        <div class="col-2">
-          <ul>
-            <li>For Education</li>
-            <li><a href="">Education</a></li>
-            <li><a href="">Education</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-help">
-        <div id="legal">Copyright © 2022 ECO-STEM. All rights reserved.</div>
-        <div id="media">
-          <div class="icons">
-            <a href="" target="_blank"> <i class="fa fa-facebook"></i></a>
-            <a href="" target="_blank"> <i class="fa fa-instagram"></i></a>
-            <a href="https://www.youtube.com/channel/UCbRKK2OV-q2E4QA71QQRGXA" target="_blank"> <i
-                class="fa fa-youtube-play"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-    </footer>
-
-
-    <!-- TOGGLR MENU -->
-    <script>
-
-      var navLinks = document.getElementById("navLinks");
-      function showMenu() {
-        navLinks.style.right = "0";
-      }
-      function hideMenu() {
-        navLinks.style.right = "-200px";
-      }
-    </script>
-
-    <script>
-      function reveal() {
-        var reveals = document.querySelectorAll(".reveal");
-
-        for (var i = 0; i < reveals.length; i++) {
-          var windowHeight = window.innerHeight;
-          var elementTop = reveals[i].getBoundingClientRect().top;
-          var elementVisible = 150;
-
-          if (elementTop < windowHeight - elementVisible) {
-            reveals[i].classList.add("active");
-          } else {
-            reveals[i].classList.remove("active");
-          }
-        }
-      }
-
-      window.addEventListener("scroll", reveal);
-    </script>
-
 </body>
 
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+    // import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.4.0/firebase-database.js";
+    import { getDatabase, set, ref, update } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
+    import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-auth.js";
+
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+        apiKey: "AIzaSyAytIc3kQL7uv8GdzFnEZ95abfbjFM2Dvg",
+        authDomain: "login-system-8626b.firebaseapp.com",
+        databaseURL: "https://login-system-8626b-default-rtdb.firebaseio.com",
+        projectId: "login-system-8626b",
+        storageBucket: "login-system-8626b.appspot.com",
+        messagingSenderId: "858581436753",
+        appId: "1:858581436753:web:73ddac209d436e77bf2b70",
+        measurementId: "G-9YTSY3MMLZ"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+    const auth = getAuth();
+
+    login.addEventListener('click', (e) => {
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+
+        signInWithEmailAndPassword(auth, email, password)
+            .then((userCredential) => {
+                // Signed in 
+                const user = userCredential.user;
+
+                const dt = new Date();
+                update(ref(database, 'users/' + user.uid), {
+                    last_login: dt,
+                })
+                window.location.replace("main.html");
+                // alert('User loged in!');
+                // ...
+            })
+            .catch((error) => {
+                const errorCode = error.code;
+                const errorMessage = error.message;
+                alert('Try again!');
+                alert(errorMessage);
+            });
+    });
+
+    const user = auth.currentUser;
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            // https://firebase.google.com/docs/reference/js/firebase.User
+            const uid = user.uid;
+
+        } else {
+            // User is signed out
+        }
+    });
+</script>
+
 </html>
+
+<!-- <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAytIc3kQL7uv8GdzFnEZ95abfbjFM2Dvg",
+      authDomain: "login-system-8626b.firebaseapp.com",
+      databaseURL: "https://login-system-8626b-default-rtdb.firebaseio.com",
+      projectId: "login-system-8626b",
+      storageBucket: "login-system-8626b.appspot.com",
+      messagingSenderId: "858581436753",
+      appId: "1:858581436753:web:73ddac209d436e77bf2b70",
+      measurementId: "G-9YTSY3MMLZ"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+  </script> -->
