@@ -11,7 +11,7 @@
 <body>
   <section class="header">
     <nav>
-      <a href="index.html">
+      <a href="main.html">
         <image src="images/icon.png" class="logo">
       </a>
       <div class="nav-links" id="navLinks">
@@ -172,12 +172,11 @@
     if (user) {
       // https://firebase.google.com/docs/reference/js/firebase.User
       const uid = user.uid;
-      // window.location.replace("main.html");
-      alert('if main');
+      const name = user.displayName
+      alert(name);
     } else {
-      // window.location.replace("index.html");
       // User is signed out
-      alert('else main');
+      // alert('else main');
     }
   });
 
