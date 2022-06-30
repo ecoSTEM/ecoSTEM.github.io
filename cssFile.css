@@ -213,26 +213,6 @@ body {
   cursor: pointer;
 }
 
-.scroll-down {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  color: darken(#8c7569, 5%);
-  font-size: 32px;
-  font-weight: 800;
-  transform: translate(-50%, -50%);
-}
-
-.modal svg {
-  margin-top: 16px;
-  width: 52px;
-  fill: currentColor;
-}
-
 @media (max-width: 700px) {
   .modal-container {
     width: 90%;
