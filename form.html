@@ -5,9 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>ECO STEM</title>
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/s1/s1.css" />
+    <link rel="stylesheet" href="css/form.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" />
-    <script src="s1.js"></script>
 </head>
 
 <body>
@@ -38,74 +37,21 @@
             </div>
             <i class="fa fa-bars" onClick="showMenu()"></i>
         </nav>
-    </section>
-
-    <section class="s1">
-        <div class="s1-title">
-            <h1>S1: Pioneer ECO-STEM</h1>
-        </div>
 
     </section>
-    <!-- s1 project-->
-    <section class="s1-project">
-        <div class="s1-project-container">
-            <div class="s1-project-row">
-                <div class="s1-project-col-left">
-                    <image src="images/s1-icons/TheWaterCyclePoster.png" class="s1-watercycleImg">
-                        <image class="transform" id="myDIV" src="images/s1-icons/water.png"></image>
-                </div>
-                <div class="s1-project-col-right">
-                    <div style="text-align: center;">
-                        <button type="button" id="waterButton" onClick="toggle()">Start</button>
-                        <div style="text-align: left;padding-top: 20px;">
-                            <h3>CONDENSATION</h3>
-                            <p>When a gas turns into a liquid, ie water vapour becomes liquid.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="s1-project-container">
-            <div class="s1-project-row">
-                <div class="s1-project-col-left">
-                    <image src="images/s1-icons/TheWaterCyclePoster.png" class="s1-watercycleImg">
-                        <image class="transform" id="myDIV" src="images/s1-icons/water.png"></image>
-                </div>
-                <div class="s1-project-col-right">
-                    <div>
-                        <button type="button" id="button" onClick="toggle()">Click Me</button>
-                    </div>
-                </div>
-            </div>
+    <section class="form">
+        <div class="form-title">
+            <h1>Learn More</h1>
         </div>
     </section>
 
-    <section class="s1-item">
-        <div class="s1-item-row reveal fade-left">
-            <div class="item-col">
-                <a href="s1-project/WaterCycle.html">
-                    <image src="images/s1-icons/01-watercycle.svg" class="s1-itemImg">
-                </a>
-            </div>
-            <div class="item-col">
-                <a href="s1-project/AnimalClassification.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-            </div>
-            <div class="item-col">
-                <a href="s1-project/PlantScience.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-            </div>
-            <div class="item-col">
-                <a href="s1-project/Water3States.html">
-                    <image src="images/productImg.png" class="s1-itemImg">
-                </a>
-            </div>
-        </div>
-
+    <section class="form-container">
+        <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSd1sGpoM_hPNH22eaws9YifwyNOuPVdLbhSxym0sIciQiiHIw/viewform?embedded=true"
+            width="640" height="986" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
     </section>
+
 
     <section class="footer">
         <div class="container">
@@ -149,6 +95,7 @@
 
         <!-- TOGGLR MENU -->
         <script>
+
             var navLinks = document.getElementById("navLinks");
             function showMenu() {
                 navLinks.style.right = "0";
@@ -176,6 +123,8 @@
             }
             window.addEventListener("scroll", reveal);
         </script>
+
+
 </body>
 
 </html>

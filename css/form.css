@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f8f8f8;
+}
+
+.form {
+  margin-bottom: 40px;
+  height: 100px;
+}
+
+.form-title {
+  width: 90%;
+  background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(18, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #fff; */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.form-title h1 {
+  color: black;
+  font-size: 50px;
+}
+
+.form-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.form-container iframe {
+  width: 640;
+  height: 986;
+}
+
+@media (max-width: 700px) {
+  .form-container iframe {
+    width: 85%;
+    height: 986;
+  }
+}
