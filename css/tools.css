@@ -55,17 +55,20 @@ body {
 }
 
 .video-col {
-  align-items: center;
   width: 50%;
   justify-content: space-around;
-
   padding: 5%;
-  margin: 10px;
-  justify-content: center;
+  margin: 5px;
   background-color: #fff;
 }
 
 .video-col p {
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.video-text {
   color: black;
   font-weight: 600;
   font-size: 16px;
