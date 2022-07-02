@@ -172,8 +172,6 @@
     if (user) {
       // https://firebase.google.com/docs/reference/js/firebase.User
       const uid = user.uid;
-      const name = user.displayName
-      alert(name);
     } else {
       // User is signed out
       // alert('else main');
@@ -183,7 +181,7 @@
   logout.addEventListener('click', (e) => {
     signOut(auth).then(() => {
       // Sign-out successful.
-      alert('user loged out');
+      // alert('user loged out');
       window.location.replace("index.html");
     }).catch((error) => {
       // An error happened.
