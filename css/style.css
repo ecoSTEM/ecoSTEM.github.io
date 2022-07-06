@@ -207,14 +207,6 @@ nav .fa {
   /* background-color: rgba(236, 233, 233, 0.834); */
 }
 
-.productImg {
-  width: 25rem;
-  box-shadow: inset 2px 2px 2px 0px rgba(255, 255, 255, 0.5),
-    7px 7px 20px 0px rgba(0, 0, 0, 0.1), 4px 4px 5px 0px rgba(0, 0, 0, 0.1);
-  outline: none;
-  border-radius: 10px;
-}
-
 h1 {
   font-size: 36px;
   font-weight: 600;
@@ -236,7 +228,7 @@ p {
 
 .course-col {
   flex-basis: 31%;
-  background-image: url(/images/productImg.png);
+  /* background-image: url(/images/productImg.png); */
   border-radius: 10px;
   margin-bottom: 5%;
   padding: 20px 12px;
@@ -493,4 +485,22 @@ p {
 .download-btn:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+.card {
+  /* width: 130px;
+  height: 195px; */
+  position: relative;
+  display: inline-block;
+  /* margin: 50px; */
+}
+.card .img-top {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 99;
+}
+.card:hover .img-top {
+  display: inline;
 }

@@ -13,9 +13,14 @@
 <body>
     <section class="header">
         <nav>
-            <a href="../main.html">
-                <image src="../images/logo/icon.png" class="logo">
-            </a>
+            <div style="display: flex; align-items: center;">
+                <a href="../main.html">
+                    <image src="../images/logo/icon.png" class="logo">
+                </a>
+                <a href="../main.html">
+                    <image src="../images/logo/youCodiaLogo.png" class="youcodialogo">
+                </a>
+            </div>
             <div class="nav-links" id="navLinks">
                 <i class="fa fa-times" onClick="hideMenu()"></i>
                 <ul>
@@ -32,7 +37,10 @@
                         <a href="../s3.html" class="nav-hover">GroundBreaker</a>
                     </li>
                     <li>
-                        <a href="learningTools.html" class="nav-hover">Learning Tools</a>
+                        <a href="../learningTools.html" class="nav-hover">Learning Tools</a>
+                    </li>
+                    <li>
+                        <input type="submit" id='logout' name="logout" value="Logout" />
                     </li>
                 </ul>
             </div>
