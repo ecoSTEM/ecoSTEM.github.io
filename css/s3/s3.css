@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Myriad Set Pro", "Helvetica Neue", "Helvetica", "Arial",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-size: 18px;
+  line-height: 1.45;
+  font-weight: 400;
+  letter-spacing: normal;
+  background-color: #f8f8f8;
+}
+
+.s3 {
+  margin-bottom: 20px;
+  height: 100px;
+}
+
+.s3-title {
+  width: 90%;
+  background: -webkit-linear-gradient(rgb(240, 240, 240), rgb(18, 17, 17));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* color: #fff; */
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+  padding-bottom: 20px;
+}
+
+.s3-title h1 {
+  color: black;
+  font-size: 50px;
+}
+
+.s3-project-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  width: 96%;
+  /* height: 30rem; */
+}
+
+.s3-project {
+  width: 100%;
+  max-height: fit-content;
+  margin: auto;
+  text-align: center;
+  padding-top: 20px;
+  /* background-color: rgba(236, 233, 233, 0.834); */
+}
+
+.s3-project-container {
+  display: flex;
+  justify-content: center;
+  height: 95vh;
+}
+.s3-productImg {
+  width: 50rem;
+}
+
+.s3-project-col-left {
+  display: flex;
+  justify-content: flex-start;
+  /* width: 80%; */
+  height: 100%;
+}
+
+.s3-project-col-right {
+  display: flex;
+  justify-content: flex-start;
+  /* width: 20%; */
+}
+
+.s3-project-col p {
+  color: black;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.s3-item-row {
+  margin-top: 5%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.item-col {
+  flex-basis: 25%;
+  /* background-image: url(/images/productImg.png); */
+  border-radius: 10px;
+  margin-bottom: 5%;
+  padding: 20px 12px;
+  box-sizing: border-box;
+}
+
+.s3-itemImg {
+  width: 100%;
+}
+
+@media (max-width: 700px) {
+  .s3-productImg {
+    width: 60%;
+  }
+
+  .s3-title h1 {
+    color: black;
+    font-size: 25px;
+  }
+
+  .s3-itemImg {
+    width: 50%;
+  }
+
+  .s3-project-col-left {
+    display: inline-block;
+  }
+
+  .s3-project-col-right {
+    align-items: center;
+    display: inline-block;
+  }
+
+  .s3-project-row {
+    flex-direction: column;
+    align-items: center;
+  }
+  .s3-item-row {
+    flex-direction: column;
+  }
+}
+
+.transform {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+.transform-active {
+  animation-name: example;
+  animation-duration: 20s;
+}
+
+.s3-watercycleImg {
+  width: 85%;
+}
+
+@keyframes example {
+  0% {
+    left: 10%;
+    top: 35%;
+  }
+  25% {
+    left: 50%;
+    top: 40%;
+  }
+  50% {
+    top: 100%;
+    left: 50%;
+  }
+  75% {
+    left: 10%;
+    top: 100%;
+  }
+  100% {
+    left: 10%;
+    top: 35%;
+  }
+}
+
+/* @keyframes example {
+      0% {
+        left: 100px;
+        top: 300px;
+      }
+      25% {
+        left: 800px;
+        top: 300px;
+      }
+      50% {
+        left: 800px;
+        top: 800px;
+      }
+      75% {
+        left: 100px;
+        top: 800px;
+      }
+      100% {
+        left: 100px;
+        top: 300px;
+      }
+    } */
+
+#waterButton {
+  position: relative;
+  display: inline-block;
+  margin: 20px;
+  color: white;
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ffa12b;
+  display: block;
+  position: relative;
+  padding: 10px 30px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, 0 10px 0 #915100;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+#waterButton:hover {
+  background-color: #589d70;
+  -webkit-box-shadow: inset 0 1px 0 #c4ffda, 0 10px 0 #02701c;
+  -moz-box-shadow: inset 0 1px 0 #c4ffda, 0 10px 0 #02701c;
+  box-shadow: inset 0 1px 0 #c4ffda, 0 10px 0 #02701c;
+}
+
+#waterButton:active {
+  top: 10px;
+  background-color: #f78900;
+
+  -webkit-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+  -moz-box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3pxpx 0 #915100;
+  box-shadow: inset 0 1px 0 #ffe5c4, inset 0 -3px 0 #915100;
+}
+
+#waterButton:after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  padding: 4px;
+  position: absolute;
+  bottom: -15px;
+  left: -4px;
+  z-index: -1;
+  background-color: #2b1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
